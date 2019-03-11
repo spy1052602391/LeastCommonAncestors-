@@ -1,0 +1,15 @@
+import java.util.*;
+//在一个满二叉树中，求任意两个节点的最近父节点。
+//利用child = parent/2
+class LCA {
+    public int getLCA(int a, int b) {
+        while(true){
+            if(a == b)
+                return a;
+            if(a > b)
+                a = a>>1;
+            if(b > a)
+                b = b>>1;
+        }
+    }
+}
